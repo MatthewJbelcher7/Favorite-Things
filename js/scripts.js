@@ -1,12 +1,15 @@
-window.onload = function() {
-  const form = document.querySelector("form");
-  form.onsubmit = function(event) {
-    event.preventDefault();
-   // const favoriteThings = ["favoriteColor", "favoriteSeason", "favoriteNinjaTurtle", "favoriteIceCream", "favoriteAnimal"]
-  
-    //> document.getElementsByName("favoriteColor").innerText = favoriteColor;
-    <input id="person1Input" type="text" name="person1Input">
-  
-  
-  };
-}
+window.addEventListener("load", function() {
+  const form = document.getElementById("favForm");
+  form.addEventListener("submit", favoriteThings); 
+});
+function favoriteThings() {
+    const favoriteAnimal = document.getElementById("favoriteAnimal").value;
+    const favoriteColor = document.getElementById("favoriteColor").value;
+    const favoriteNinjaTurtle = document.getElementById("favoriteNinjaTurtle").value;
+    const favoriteIceCream = document.getElementById("favoriteIceCream").value;
+    const favoriteSeason = document.getElementById("favoriteSeason").value;
+
+  let favThings = [favoriteColor, favoriteSeason, favoriteNinjaTurtle, favoriteIceCream, favoriteAnimal];
+  console.log("array has been created");
+  return favThings;
+};
