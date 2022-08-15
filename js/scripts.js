@@ -16,4 +16,8 @@ function favoriteThings() {
 function submitInput(event) {
   event.preventDefault();
   favThings = favoriteThings();
+  const onlyThree =[];
+  onlyThree.push(favThings[1],favThings[0],favThings[2]);
+  console.log(onlyThree);
 };
+
