@@ -1,6 +1,6 @@
 window.addEventListener("load", function() {
   const form = document.getElementById("favForm");
-  form.addEventListener("submit", favoriteThings); 
+  form.addEventListener("submit", submitInput); 
 });
 function favoriteThings() {
     const favoriteAnimal = document.getElementById("favoriteAnimal").value;
@@ -9,7 +9,11 @@ function favoriteThings() {
     const favoriteIceCream = document.getElementById("favoriteIceCream").value;
     const favoriteSeason = document.getElementById("favoriteSeason").value;
 
-  let favThings = [favoriteColor, favoriteSeason, favoriteNinjaTurtle, favoriteIceCream, favoriteAnimal];
-  console.log("array has been created");
+  const favThings = [favoriteColor, favoriteSeason, favoriteNinjaTurtle, favoriteIceCream, favoriteAnimal];
   return favThings;
+};
+
+function submitInput(event) {
+  event.preventDefault();
+  favThings = favoriteThings();
 };
